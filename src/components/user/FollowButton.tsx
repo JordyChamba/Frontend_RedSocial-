@@ -31,7 +31,7 @@ export default function FollowButton({ userId, isFollowing, username }: FollowBu
 
       return { previousUser };
     },
-    onError: (err, variables, context) => {
+    onError: (_err, _variables, context) => {
       if (context?.previousUser) {
         queryClient.setQueryData(['user', username], context.previousUser);
       }

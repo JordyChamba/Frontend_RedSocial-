@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { formatDistanceToNow } from 'date-fns';
 import { useNotificationStore } from '@/store/notificationStore';
 import { notificationService } from '@/services/notificationService';
-import { Notification, NotificationType } from '@/types/notification';
+import { NotificationType } from '@/types/notification';
 
 export default function NotificationsPage() {
-  const { notifications, setNotifications, markAsRead, unreadCount, decrementUnreadCount } = useNotificationStore();
+  const { notifications, setNotifications, markAsRead, unreadCount } = useNotificationStore();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
