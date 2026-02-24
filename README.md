@@ -42,6 +42,24 @@ npm run dev
 yarn dev
 ```
 
+### 🐳 Construir con Docker
+En la raíz del proyecto hay un `Dockerfile` que compila y empaqueta la aplicación en un contenedor Nginx.
+
+```bash
+# desde la raíz de workspace
+cd /home/jpeter/Escritorio/socialHub
+docker build -t socialhub-frontend ./frontend
+```
+
+También puedes arrancar ambos servicios con el `docker-compose.yml`:
+
+```bash
+docker compose up --build
+```
+
+El frontend quedará expuesto en `http://localhost:3000`.
+
+
 La aplicación estará disponible en: `http://localhost:3000`
 
 ## 🏗️ Build
